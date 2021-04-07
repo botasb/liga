@@ -111,10 +111,6 @@ coef_goles_draw = st.sidebar.slider(
     0.0, 1.0, 0.0
 )
 
-puntos_win = st.sidebar.slider(
-    'Puntos por victoria:',
-    0, 10, 3
-)
 
 df = pd.read_csv(str(temporada) + '.csv',  header=0, usecols=['HomeTeam', 'AwayTeam', 'FTHG', 'FTAG','FTR'])
 
