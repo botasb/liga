@@ -24,7 +24,7 @@ def gen_clasificacion(
     # Def función cálculo de puntos
     def process_result(row):
         if row.FTR == 'H':
-            clasi.loc[r.HomeTeam]['Puntos'] += puntos_win + (row.FTHG * coef_goles_win)
+            clasi.loc[r.HomeTeam]['Puntos'] += puntos_victoria + (row.FTHG * coef_goles_win)
             clasi.loc[r.HomeTeam]['Goles_a_favor'] += row.FTHG
             clasi.loc[r.HomeTeam]['Goles_en_contra'] += row.FTAG
             clasi.loc[r.AwayTeam]['Puntos'] += row.FTAG * coef_goles_loss
@@ -34,7 +34,7 @@ def gen_clasificacion(
             clasi.loc[r.HomeTeam]['Puntos'] +=  (row.FTHG * coef_goles_loss)
             clasi.loc[r.HomeTeam]['Goles_a_favor'] += row.FTHG
             clasi.loc[r.HomeTeam]['Goles_en_contra'] += row.FTAG
-            clasi.loc[r.AwayTeam]['Puntos'] += puntos_win + (row.FTAG * coef_goles_win)
+            clasi.loc[r.AwayTeam]['Puntos'] += puntos_victoria + (row.FTAG * coef_goles_win)
             clasi.loc[r.AwayTeam]['Goles_a_favor'] += row.FTAG
             clasi.loc[r.AwayTeam]['Goles_en_contra'] += row.FTHG
         elif row.FTR == 'D':
