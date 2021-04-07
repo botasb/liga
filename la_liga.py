@@ -116,7 +116,7 @@ puntos_win = st.sidebar.slider(
     0, 10, 3
 )
 
-df = pd.read_csv('/home/alvaro/Descargas/spanish-la-liga_zip/data/' + str(temporada) + '.csv',  header=0, usecols=['HomeTeam', 'AwayTeam', 'FTHG', 'FTAG','FTR'])
+df = pd.read_csv(str(temporada) + '.csv',  header=0, usecols=['HomeTeam', 'AwayTeam', 'FTHG', 'FTAG','FTR'])
 
 f1 = go.FigureWidget(get_fig(gen_clasificacion(df)))
 f1.update_layout(width=550, height=700)
@@ -132,7 +132,7 @@ st.subheader('Parámetros actuales:\nCoef_ganador: {}, Coef_perdedor: {}, Coef_e
 
 with f2.batch_update():
         #clasificacion = pd.DataFrame(columns=['Equipo','Goles_a_favor','Goles_en_contra','Puntos'])
-        df = pd.read_csv('/home/alvaro/Descargas/spanish-la-liga_zip/data/' + str(temporada) + '.csv',  header=0, usecols=['HomeTeam', 'AwayTeam', 'FTHG', 'FTAG','FTR'])
+        df = pd.read_csv(str(temporada) + '.csv',  header=0, usecols=['HomeTeam', 'AwayTeam', 'FTHG', 'FTAG','FTR'])
         clasificacion = gen_clasificacion(df)
         clasificacion.reset_index(drop=False, inplace=True)
 
