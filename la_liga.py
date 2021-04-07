@@ -2,7 +2,7 @@ import streamlit as st
 import tempfile
 import os
 import pandas as pd
-import plotly.graph_objs as go
+import plotly.graph_objects as go
 import numpy as np
 
 
