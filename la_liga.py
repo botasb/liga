@@ -8,9 +8,9 @@ import numpy as np
 
 #os.environ['TF_XLA_FLAGS'] = '--tf_xla_enable_xla_devices'
 
-st.set_page_config(layout="wide", initial_sidebar_state='collapsed')
+st.set_page_config(layout="wide", initial_sidebar_state='auto')
 
-st.title("SIMULACIÓN SISTEMA DE PUNTUACIÓN LIGA ESPAÑOLA")
+st.title("SIMULACIÓN SISTEMA DE PUNTUACIÓN: LIGA ESPAÑOLA")
 
 
 def gen_clasificacion(
@@ -124,7 +124,7 @@ f2 = go.FigureWidget(get_fig(gen_clasificacion(df)))
 f2.update_layout(width=700, height=900)
 
 
-st.header("Despliega el menú de la izquierda para seleccionar los parámetros de ajuste de puntuaciónes. Pliega el menú para ver los resultados mejor.")
+st.header("El menú de la izquierda te permite ajustar coeficiente multiplicadores de goles marcados por partido y las tablas te muestran la clasificación original y cómo habrían quedado con el sistema de coeficientes aplicado.")
 
 #st.subheader('Parámetros actuales:\nPuntos por vitoria: {}, Puntos por empate: {}, Coef_ganador: {}, Coef_perdedor: {}, Coef_empate: {}'.format(puntos_win, puntos_empate, coef_goles_win, coef_goles_loss, coef_goles_draw))
 st.subheader('Parámetros actuales:\nCoef_ganador: {}, Coef_perdedor: {}, Coef_empate: {}'.format(coef_goles_win, coef_goles_loss, coef_goles_draw))
