@@ -119,9 +119,9 @@ puntos_win = st.sidebar.slider(
 df = pd.read_csv(str(temporada) + '.csv',  header=0, usecols=['HomeTeam', 'AwayTeam', 'FTHG', 'FTAG','FTR'])
 
 f1 = go.FigureWidget(get_fig(gen_clasificacion(df)))
-f1.update_layout(width=550, height=700)
+f1.update_layout(width=700, height=900)
 f2 = go.FigureWidget(get_fig(gen_clasificacion(df)))
-f2.update_layout(width=550, height=700)
+f2.update_layout(width=700, height=900)
 
 
 st.header("Despliega el menú de la izquierda para seleccionar los parámetros de ajuste de puntuaciónes. Pliega el menú para ver los resultados mejor.")
