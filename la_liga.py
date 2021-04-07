@@ -76,12 +76,12 @@ def get_fig(clas):
       header=dict(
         values=["<b>POSICIÓN</b>","<b>EQUIPO</b>", "<b>GOLES A FAVOR</b>", "<b>GOLES EN CONTRA</b>", "<b>PUNTOS</b>"],
         line_color='darkslategray', fill_color='lightskyblue',
-        align='center', font=dict(color='black', size=9)
+        align='center', font=dict(color='black', size=11)
       ),
       cells=dict(
         values=[clas.Posicion, clas.Equipo, clas.Goles_a_favor, clas.Goles_en_contra, clas.Puntos],
         line_color=['black'], fill_color=colors,
-        align='center', font=dict(color='black', size=9)
+        align='center', font=dict(color='black', size=11)
       )),
     ])
 
@@ -153,12 +153,12 @@ with f2.batch_update():
           header=dict(
             values=["<b>POSICIÓN</b>","<b>CAMBIO POSICIÓN</b>","<b>EQUIPO</b>", "<b>GOLES A FAVOR</b>", "<b>GOLES EN CONTRA</b>", "<b>PUNTOS</b>"],
             line_color='darkslategray', fill_color='lightskyblue',
-            align='center', font=dict(color='black', size=8)
+            align='center', font=dict(color='black', size=11)
           ),
           cells=dict(
             values=[tmp_clas.Posicion, tmp_clas.CambioPosicion, tmp_clas.Equipo, tmp_clas.Goles_a_favor, tmp_clas.Goles_en_contra, tmp_clas.Puntos],
             line_color=['black'], fill_color=colors,
-            align='center', font=dict(color='black', size=8)
+            align='center', font=dict(color='black', size=11)
           ))
         ]
         )
